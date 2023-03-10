@@ -17,7 +17,7 @@
     <ul>
         @foreach($posts as $post)
             <li>
-                <a href="{{ $post->getUrl() }}">{{ $post->title }}</a>
+                <a href="{{ route('post.show', $post) }}">{{ $post->title }}</a>
             </li>
         @endforeach
     </ul>

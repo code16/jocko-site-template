@@ -11,7 +11,11 @@ class Page extends Model
     use Sushi;
 
     protected array $schema = [
+        'id' => 'integer',
+        'key' => 'string',
+        'title' => 'string',
         'content' => 'string',
+        'cover' => 'string',
     ];
 
     public function getRows()

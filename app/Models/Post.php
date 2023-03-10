@@ -11,6 +11,8 @@ class Post extends Model
     use Sushi;
 
     protected array $schema = [
+        'id' => 'integer',
+        'title' => 'string',
         'content' => 'string',
     ];
 
