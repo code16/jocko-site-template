@@ -21,8 +21,8 @@
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../jocko-client"
+            "type": "vcs",
+            "url": "https://github.com/code16/jocko-client"
         }
     ],
     "autoload": {

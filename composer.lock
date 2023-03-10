@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "338b85ac4948f5619b31164d5776f1cf",
+    "content-hash": "b3d35cc46f9df5a890d0bbffaa6f4c27",
     "packages": [
         {
             "name": "brick/math",
@@ -117,10 +117,16 @@
         {
             "name": "code16/jocko-client",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/code16/jocko-client.git",
+                "reference": "bd5b22385bb37f3d05a8f8e6e4c9dc6cc919d135"
+            },
             "dist": {
-                "type": "path",
-                "url": "../jocko-client",
-                "reference": "d0e434ac9ddf62e44ebb13e93b58dcd038949108"
+                "type": "zip",
+                "url": "https://api.github.com/repos/code16/jocko-client/zipball/bd5b22385bb37f3d05a8f8e6e4c9dc6cc919d135",
+                "reference": "bd5b22385bb37f3d05a8f8e6e4c9dc6cc919d135",
+                "shasum": ""
             },
             "require": {
                 "illuminate/contracts": "^10.0",
@@ -136,6 +142,7 @@
                 "pestphp/pest-plugin-laravel": "^2.0",
                 "spatie/laravel-ray": "^1.26"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -192,9 +199,11 @@
                 "jocko-client",
                 "laravel"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/code16/jocko-client/tree/main",
+                "issues": "https://github.com/code16/jocko-client/issues"
+            },
+            "time": "2023-03-10T10:52:32+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
