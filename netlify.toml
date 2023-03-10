@@ -4,6 +4,7 @@ command = '''
     npm run build &&
     cp .env.production .env &&
     echo -e "APP_URL=http://127.0.0.1:8000" >> .env &&
+    echo -e "ASSET_URL=$DEPLOY_URL" >> .env &&
     echo -e "JOCKO_API_URL=$JOCKO_API_URL" >> .env &&
     echo -e "JOCKO_API_TOKEN=$JOCKO_API_TOKEN" >> .env &&
     php artisan key:generate &&
