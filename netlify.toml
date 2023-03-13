@@ -9,6 +9,8 @@ command = '''
     php artisan key:generate &&
     (php artisan serve --host=127.0.0.1 --port=8000 &) &&
     sleep 1 &&
-    (php artisan export || cat ./storage/logs/laravel.log && exit 1)
+    (php artisan export || cat ./storage/logs/laravel.log && EXIT_STATUS=1) &&
+    kill $(jobs -p) &&
+    exit $EXIT_STATUS
 '''
 environment = { PHP_VERSION = "8.1" }
