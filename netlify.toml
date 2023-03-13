@@ -8,10 +8,11 @@ echo -e "APP_URL=http://127.0.0.1:8000" >> .env
 echo -e "JOCKO_API_URL=$JOCKO_API_URL" >> .env
 echo -e "JOCKO_API_TOKEN=$JOCKO_API_TOKEN" >> .env
 php artisan key:generate
-php artisan serve --host=127.0.0.1 --port=8000 &
+php artisan serve --host=127.0.0.1 --port=8000 & pid=$!
 sleep 1
 php artisan export || cat ./storage/logs/laravel.log && EXIT_STATUS=1
-kill $!
+echo "killing server (process id '$pid')"
+kill $pid
 exit $EXIT_STATUS
 '''
 environment = { PHP_VERSION = "8.1" }
