@@ -120,12 +120,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/code16/jocko-client.git",
-                "reference": "7b96bfa1b4af764ff0c150af69f18f15f0a2ed0c"
+                "reference": "213ae4518f6b3115d41550df75296b3dd51868f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code16/jocko-client/zipball/7b96bfa1b4af764ff0c150af69f18f15f0a2ed0c",
-                "reference": "7b96bfa1b4af764ff0c150af69f18f15f0a2ed0c",
+                "url": "https://api.github.com/repos/code16/jocko-client/zipball/213ae4518f6b3115d41550df75296b3dd51868f5",
+                "reference": "213ae4518f6b3115d41550df75296b3dd51868f5",
                 "shasum": ""
             },
             "require": {
@@ -203,7 +203,7 @@
                 "source": "https://github.com/code16/jocko-client/tree/main",
                 "issues": "https://github.com/code16/jocko-client/issues"
             },
-            "time": "2023-03-10T14:31:19+00:00"
+            "time": "2023-03-13T11:07:50+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
