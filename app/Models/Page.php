@@ -2,26 +2,27 @@
 
 namespace App\Models;
 
+use Code16\JockoClient\Eloquent\Concerns\CastsCollection;
 use Code16\JockoClient\Facades\JockoClient;
 use Code16\JockoClient\Support\Image;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Sushi\Sushi;
 
+/**
+ * @property int $id
+ * @property string $key
+ * @property string $title
+ * @property string $content
+ */
 class Page extends Model
 {
     use Sushi;
-
-    protected array $schema = [
-        'id' => 'integer',
-        'key' => 'string',
-        'title' => 'string',
-        'content' => 'string',
-    ];
+    use CastsCollection;
 
     public function getRows(): array
     {
-        return JockoClient::getCollection('pages');
+        return $this->castCollection(JockoClient::getCollection('pages'));
     }
 
     protected function sushiShouldCache(): bool

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Code16\JockoClient\Eloquent\Casts\ImageCollection;
+use Code16\JockoClient\Eloquent\Concerns\CastsCollection;
 use Code16\JockoClient\Facades\JockoClient;
 use Code16\JockoClient\Support\Image;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -11,18 +12,15 @@ use Illuminate\Support\Collection;
 use Sushi\Sushi;
 
 /**
+ * @property int $id
+ * @property string $title
+ * @property string $content
  * @property Collection<Image> $visuals
  */
 class Post extends Model
 {
     use Sushi;
-
-    protected array $schema = [
-        'id' => 'integer',
-        'title' => 'string',
-        'content' => 'string',
-        'visuals' => 'json',
-    ];
+    use CastsCollection;
 
     protected $casts = [
         'visuals' => ImageCollection::class,
@@ -30,12 +28,8 @@ class Post extends Model
 
     public function getRows(): array
     {
-        return collect(JockoClient::getCollection('posts'))
-            ->map(fn ($attributes) => [
-                ...collect($this->schema)->mapWithKeys(fn ($value, $key) => [$key => null]),
-                ...collect($attributes)->mapWithKeys(fn ($value, $key) => [$key => is_array($value) ? json_encode($value) : $value])
-
-            ])->toArray();
+        // todo: Jocko must always send all properties to prevent SQL exception
+        return $this->castCollection(JockoClient::getCollection('posts'));
     }
 
     protected function sushiShouldCache(): bool
