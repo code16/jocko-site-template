@@ -22,12 +22,8 @@ class Page extends Model
 
     public function getRows(): array
     {
+        ray('getRows');
         return $this->castCollection(JockoClient::getCollection('pages'));
-    }
-
-    protected function sushiShouldCache(): bool
-    {
-        return true;
     }
 
     public function cover(): Attribute

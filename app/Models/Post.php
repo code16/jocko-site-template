@@ -28,13 +28,7 @@ class Post extends Model
 
     public function getRows(): array
     {
-        // todo: Jocko must always send all properties to prevent SQL exception
         return $this->castCollection(JockoClient::getCollection('posts'));
-    }
-
-    protected function sushiShouldCache(): bool
-    {
-        return true;
     }
 
     public function cover(): Attribute
