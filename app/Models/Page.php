@@ -22,7 +22,6 @@ class Page extends Model
 
     public function getRows(): array
     {
-        ray('getRows');
         return $this->castCollection(JockoClient::getCollection('pages'));
     }
 
