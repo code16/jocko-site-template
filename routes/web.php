@@ -1,17 +1,12 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('pages/home', [
-        'page' => \App\Models\Page::firstWhere('key', 'home'),
-        'posts' => \App\Models\Post::all(),
-    ]);
-})->name('home.index');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
-Route::get('/post/{post}', function (\App\Models\Post $post) {
-    return view('pages/post', [
-        'post' => $post,
-    ]);
-})->name('post.show');
+Route::get('/posts/index/{page?}', [PostsController::class, 'index'])->name('posts.index');
+Route::get('/posts/index/l/{length}/{page?}', [PostsController::class, 'index'])->name('posts.index.filter');
+Route::get('/posts/{post}', [PostsController::class, 'show'])->name('posts.show');

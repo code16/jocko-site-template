@@ -14,11 +14,7 @@
         {!! $page->content !!}
     </x-content>
 
-    <ul>
-        @foreach($posts as $post)
-            <li>
-                <a href="{{ route('post.show', $post) }}">{{ $post->title }}</a>
-            </li>
-        @endforeach
-    </ul>
+    <div>
+        <a href="{{ route('posts.index') }}">See all posts</a>
+    </div>
 </x-layout>
