@@ -8,8 +8,10 @@
 
     <div>
         <a href="{{ route('posts.index') }}">reset</a>
-        <a href="{{ route('posts.index.filter', ['length' => 'small']) }}">small</a>
-        <a href="{{ route('posts.index.filter', ['length' => 'long']) }}">long</a>
+        <a href="{{ route('posts.index.filter', ['length' => 'small', 'alpha' => $alpha]) }}">small</a>
+        <a href="{{ route('posts.index.filter', ['length' => 'long', 'alpha' => $alpha]) }}">long</a>
+        <a href="{{ route('posts.index.filter', ['length' => $length, 'alpha' => 'a-m']) }}">a-m</a>
+        <a href="{{ route('posts.index.filter', ['length' => $length, 'alpha' => 'n-z']) }}">n-z</a>
     </div>
 
     <ul>
