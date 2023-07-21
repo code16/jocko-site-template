@@ -30,6 +30,10 @@
             <main>
                 {{ $slot }}
             </main>
+
+            <footer class="mt-6">
+                <a href="{{ app(\App\Settings\Settings::class)->fb_url }}">Facebook</a>
+            </footer>
         </div>
     </body>
 </html>
