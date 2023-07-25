@@ -9,16 +9,19 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Sushi\Sushi;
 
-/**
- * @property int $id
- * @property string $key
- * @property string $title
- * @property string $content
- */
+
 class Page extends Model
 {
     use Sushi;
     use CastsCollection;
+
+    protected array $schema = [
+        'id' => 'integer',
+        'key' => 'string',
+        'title' => 'string',
+        'content' => 'string',
+//        'cover' => 'string',
+    ];
 
     public function getRows(): array
     {
@@ -27,6 +30,6 @@ class Page extends Model
 
     public function cover(): Attribute
     {
-        return Attribute::make(fn ($value) => new Image($value));
+        return Attribute::make(fn ($url) => Image::make($url));
     }
 }
