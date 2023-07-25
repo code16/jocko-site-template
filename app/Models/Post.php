@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Code16\JockoClient\Eloquent\Concerns\CastsCollection;
-use Code16\JockoClient\Facades\JockoClient;
+use Code16\JockoClient\Facades\Jocko;
 use Code16\JockoClient\Support\Image;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
@@ -24,7 +24,7 @@ class Post extends Model
 
     public function getRows(): array
     {
-        return $this->castCollection(JockoClient::getCollection('posts'));
+        return $this->castCollection(Jocko::getCollection('posts'));
     }
 
     public function cover(): Attribute
@@ -35,5 +35,10 @@ class Post extends Model
     public function visuals(): Attribute
     {
         return Attribute::make(fn ($visuals) => Image::collection($this->fromJson($visuals)));
+    }
+
+    protected function sushiShouldCache(): bool
+    {
+        return Jocko::shouldCache();
     }
 }

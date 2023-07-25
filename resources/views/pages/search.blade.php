@@ -8,12 +8,12 @@
     <div x-data="{
             results: null,
             searchParams: new URLSearchParams(location.search),
-            endpoint: @js(JockoClient::searchUrl('posts')),
-            token: @js(config('jocko-client.api_token'))
+            endpoint: @js(Jocko::searchUrl('posts')),
+            apiKey: @js(Jocko::apiKey())
         }"
         x-init="results = await fetch(`${endpoint}?${searchParams}`, {
             headers: {
-                Authorization: `Bearer ${token}`
+                Authorization: `Bearer ${apiKey}`
             }
         }).then(response => response.json())"
     >

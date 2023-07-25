@@ -2,7 +2,7 @@
 
 namespace App\Settings;
 
-use Code16\JockoClient\WebsiteSettings;
+use Code16\JockoClient\Support\WebsiteSettings;
 
 class Settings extends WebsiteSettings
 {
