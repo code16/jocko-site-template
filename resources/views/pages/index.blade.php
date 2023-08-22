@@ -1,8 +1,6 @@
 
 @php
-/**
- * @var \App\Models\Page $page
- */
+    $page = \App\Models\Page::firstWhere('key', 'home');
 @endphp
 
 <x-layout>
