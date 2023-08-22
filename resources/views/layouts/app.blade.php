@@ -27,7 +27,7 @@
 
             <main>
                 @if(!request()->routeIs('search.*'))
-                    <form method="GET" action="{{ route('search.index') }}">
+                    <form method="GET" action="{{ route('search.index', absolute: false) }}">
                         <label for="search">Search posts</label>
                         <input type="search" name="query" id="search" :value="searchParams.get('query')" autocomplete="off">
 
