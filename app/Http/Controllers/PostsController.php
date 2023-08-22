@@ -17,8 +17,8 @@ class PostsController extends Controller
             'posts' => Post::query()
                 ->when($length === 'small')->whereRaw('LENGTH(title) < 30')
                 ->when($length === 'long')->whereRaw('LENGTH(title) > 40')
-                ->when($alpha === 'a-m')->whereRaw("UPPER(SUBSTRING(title, 1, 1)) BETWEEN 'A' AND 'M'")
-                ->when($alpha === 'n-z')->whereRaw("UPPER(SUBSTRING(title, 1, 1)) BETWEEN 'N' AND 'Z'")
+                ->when($alpha === 'a-m')->whereRaw("UPPER(SUBSTR(title, 1, 1)) BETWEEN 'A' AND 'M'")
+                ->when($alpha === 'n-z')->whereRaw("UPPER(SUBSTR(title, 1, 1)) BETWEEN 'N' AND 'Z'")
                 ->simplePaginate(2, page: $page),
             'length' => $length,
             'alpha' => $alpha,
