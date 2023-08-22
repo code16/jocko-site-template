@@ -15,6 +15,6 @@
     </x-content>
 
     <div>
-        <a href="{{ route('posts.index') }}">See all posts</a>
+        <a href="{{ route('posts.index', absolute: false) }}">See all posts</a>
     </div>
 </x-layout>
