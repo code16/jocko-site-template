@@ -16,5 +16,6 @@
 
     <div>
         <a href="{{ route('posts.index', absolute: false) }}">See all posts</a>
+        <a href="{{ route('search.index', absolute: false) }}">Search</a>
     </div>
 </x-layout>
