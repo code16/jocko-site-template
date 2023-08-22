@@ -13,12 +13,13 @@
         }"
         x-init="results = await fetch(`${endpoint}?${searchParams}`, {
             headers: {
+                Accept: 'application/json, */*',
                 Authorization: `Bearer ${apiKey}`
             }
-        }).then(response => response.json())"
+        }).then(response => response.ok ? response.json() : null)"
     >
         <form method="GET">
-            <label for="search">Search</label>
+            <label for="search">Search posts</label>
             <input type="search" name="query" id="search" :value="searchParams.get('query')" autocomplete="off">
 
             <input type="submit" value="Search">

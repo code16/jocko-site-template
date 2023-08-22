@@ -15,6 +15,7 @@ return [
      * For example: "about", "posts/featured"
      */
     'paths' => [
+        '/search',
     ],
 
     /*
