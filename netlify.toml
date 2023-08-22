@@ -12,6 +12,6 @@ sleep 1
 php artisan export || cat ./storage/logs/laravel.log && EXIT_STATUS=1
 echo "killing server (process id '$pid')"
 kill $pid
-# exit $EXIT_STATUS
+exit ${EXIT_STATUS:-0}
 '''
 environment = { PHP_VERSION = "8.1" }
