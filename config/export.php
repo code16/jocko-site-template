@@ -58,8 +58,7 @@ return [
      * You can skip these by adding a `--skip-{name}` flag to the command.
      */
     'before' => [
-        // 'assets' => '/usr/local/bin/yarn production',
-        'clean-sushi-cache' => 'rm storage/framework/cache/sushi*',
+        'clean-sushi-cache' => 'rm -f storage/framework/cache/sushi-*.sqlite',
     ],
 
     /*
