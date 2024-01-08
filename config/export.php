@@ -59,6 +59,7 @@ return [
      */
     'before' => [
         // 'assets' => '/usr/local/bin/yarn production',
+        'clean-sushi-cache' => 'rm storage/framework/cache/sushi*',
     ],
 
     /*
