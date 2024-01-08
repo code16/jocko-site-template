@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3d35cc46f9df5a890d0bbffaa6f4c27",
+    "content-hash": "67a1063a7b183dc656e23e447774ead0",
     "packages": [
         {
             "name": "brick/math",
@@ -3771,16 +3771,16 @@
         },
         {
             "name": "spatie/laravel-export",
-            "version": "0.3.11",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-export.git",
-                "reference": "856977501b376c70dc2602d6e0fe795ce367f2a6"
+                "reference": "9d4ad227395e467ee9eab5beea8064f80fa81f60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-export/zipball/856977501b376c70dc2602d6e0fe795ce367f2a6",
-                "reference": "856977501b376c70dc2602d6e0fe795ce367f2a6",
+                "url": "https://api.github.com/repos/spatie/laravel-export/zipball/9d4ad227395e467ee9eab5beea8064f80fa81f60",
+                "reference": "9d4ad227395e467ee9eab5beea8064f80fa81f60",
                 "shasum": ""
             },
             "require": {
@@ -3836,7 +3836,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/laravel-export/tree/0.3.11"
+                "source": "https://github.com/spatie/laravel-export/tree/1.0.0"
             },
             "funding": [
                 {
@@ -3848,7 +3848,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-10T14:48:45+00:00"
+            "time": "2024-01-08T11:08:02+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
