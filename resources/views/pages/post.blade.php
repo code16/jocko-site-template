@@ -16,8 +16,11 @@
         <img src="{{ $post->cover->thumbnail(500, 500) }}" alt="{{ $post->title }}">
     @endif
 
-    <x-content :image-thumbnail-width="1024">
-        {!! $post->content !!}
+    <x-content>
+        <x-jocko-content :image-thumbnail-width="1024">
+            <x-jocko-content::attributes component="jocko-image" class="w-100" />
+            {!! $post->content !!}
+        </x-jocko-content>
     </x-content>
 
     @if(count($post->visuals ?? []))
