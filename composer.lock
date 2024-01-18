@@ -188,12 +188,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/code16/jocko-client.git",
-                "reference": "c2afadfaf6311596ac3d6bb1ffc3e38a9259db22"
+                "reference": "d944de223223eb62f3eb7f296ffd09f6194a1843"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/code16/jocko-client/zipball/c2afadfaf6311596ac3d6bb1ffc3e38a9259db22",
-                "reference": "c2afadfaf6311596ac3d6bb1ffc3e38a9259db22",
+                "url": "https://api.github.com/repos/code16/jocko-client/zipball/d944de223223eb62f3eb7f296ffd09f6194a1843",
+                "reference": "d944de223223eb62f3eb7f296ffd09f6194a1843",
                 "shasum": ""
             },
             "require": {
@@ -272,7 +272,7 @@
                 "source": "https://github.com/code16/jocko-client/tree/main",
                 "issues": "https://github.com/code16/jocko-client/issues"
             },
-            "time": "2024-01-17T15:24:00+00:00"
+            "time": "2024-01-18T16:00:08+00:00"
         },
         {
             "name": "code16/laravel-content-renderer",
