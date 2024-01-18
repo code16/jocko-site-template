@@ -30,7 +30,7 @@ class Page extends Model
 
     public function cover(): Attribute
     {
-        return Attribute::make(fn ($url) => Image::make($url));
+        return Attribute::make(fn ($url) => $url ? Image::make($url) : null);
     }
 
     protected function sushiShouldCache(): bool
